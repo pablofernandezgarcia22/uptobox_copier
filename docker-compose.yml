@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  uptobox_server  :
+    build: .
+    network_mode: "host"
+    environment:
+      # SERVER
+      - SERVER_PATH=""
+      - COPY_PATH=""
+      - MAX_COPY_SIZE=100
+      - MAX_COPY_FILES=100
+      - TOKEN=""
+    restart: always
