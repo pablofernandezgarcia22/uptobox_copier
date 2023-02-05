@@ -10,4 +10,3 @@ services:
       - MAX_COPY_SIZE=100
       - MAX_COPY_FILES=100
       - TOKEN=""
-    restart: always
