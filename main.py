@@ -80,6 +80,7 @@ class InvalidCopyFolder(Exception):
         super().__init__(self.message)
 
 def check_empty_folder_exists(PATH):
+    print("Checking folder %s" % PATH)
     try:
         resp = api.get_folder_structure(PATH,0)
         if len(resp["data"]["folders"]) != 0 or len( resp["data"]["files"]) != 0: 
