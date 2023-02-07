@@ -56,7 +56,7 @@ def scrap_folder(path,copy_path, folder_code = 0):
             FILES_QUEUE.append(f)    
             FILES_folder += 1
 
-        FINISH_FILE_LOCATION = len(resp["data"]["files"]) != 10        
+        FINISH_FILE_LOCATION = len(resp["data"]["files"]) != 100 and len(resp["data"]["folders"]) != 100     
         OFFSET += 100
     print("FOLDER: "+path+" files: "+str(FILES_folder))
     copy_queue(CURRENT_FOLDER_ID,FILES_QUEUE)
