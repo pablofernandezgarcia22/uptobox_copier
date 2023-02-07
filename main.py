@@ -24,7 +24,9 @@ def copy_queue(destination_folder_id, FILES_QUEUE):
             api.copy_files(destination_folder_id, QUEUE)
             QUEUE = []
             QUEUE_SIZE = 0
-    
+    if len(QUEUE) != 0:
+        api.copy_files(destination_folder_id, QUEUE)
+        
 def scrap_folder(path,copy_path, folder_code = 0):
     print("Analysing %s" % path)
     print("Copy to %s" % copy_path)
